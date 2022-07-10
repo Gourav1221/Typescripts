@@ -163,3 +163,35 @@ function sum(a: number, b?: number):number   {
             place:"palur"
         }
     }
+
+
+    let array : User[] = [{
+        name : "gourav",
+        age: 12,
+        salary: 120,
+        isEmployee:true,
+        country:Country["U.S.A"]
+    }]
+
+    //Assignment =1 
+
+
+    // const sort = (data:User[], sortBy: keyof User):User[] => {
+    //     ////
+    //     return data
+    // }
+
+
+
+    //     const sort<T> = (data:T[], sortBy: T):T[]=> {
+    //     ////
+    //     return data
+    // }
+
+    function sort<T>(data:T[], sortBy:keyof T):T[]{
+        return data
+    }
+
+
+  let some =  sort<User>(array,"name")
+
